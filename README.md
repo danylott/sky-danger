@@ -1,0 +1,11 @@
+## QuickStart
+- Create venv: `python3 -m venv venv`
+- Activate venv: `source venv/bin/activate`
+- Download `tesseract` with languages (mac): 
+  - `brew install tesseract`
+  - `brew install tesseract-lang`
+- Install requirements: `pip install -r requirements.txt`
+- Optional - run test with pytest: `pytest`
+- Configure `config.ini` with your own credentials from `https://my.telegram.org/` (API development tools)
+- Run `sky_danger.py`
+- Check if Everything works using `https://t.me/test_sky_danger`

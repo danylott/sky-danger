@@ -1,0 +1,6 @@
+config.ini
+venv
+**.session
+images
+.idea
+.DS_store
