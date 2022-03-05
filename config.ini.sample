@@ -8,3 +8,12 @@ api_hash = YOUR_TELEGRAM_API_HASH
 # use full phone number including + and country code
 phone = YOUR_TELEGRAM_PHONE_NUMBER
 username = YOUR_TELEGRAM_USERNAME
+
+[Twilio]
+twilio_account_sid = YOUR_twilio_account_sid
+twilio_auth_token = YOUR_twilio_auth_token
+twilio_bin_url = YOUR_twilio_bin_url
+twilio_phone_number = YOUR_twilio_phone_number
+
+personal_phone_number = YOUR_personal_phone_number
+

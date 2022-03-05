@@ -11,6 +11,7 @@ from telethon.errors import SessionPasswordNeededError
 from telethon.tl.functions.messages import GetHistoryRequest
 from telethon.tl.types import MessageMediaPhoto
 
+from call import perform_call
 from check_danger import check_text_is_danger, check_image_is_danger
 
 
@@ -109,6 +110,7 @@ def main():
                 last_message_id = message.id
 
                 if check_message_is_danger(client, message, datetime_str):
+                    perform_call()  # ALARM Call!
                     play_alarm()  # ALARM!!!
 
             time.sleep(TICK_SECONDS)
