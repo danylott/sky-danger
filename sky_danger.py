@@ -15,8 +15,8 @@ from call import perform_call
 from check_danger import check_text_is_danger, check_image_is_danger
 
 
-CHANNEL_LINK = "https://t.me/test_sky_danger"  # https://t.me/slavutych_mr for production
-TICK_SECONDS = 5  # 60 for production
+CHANNEL_LINK = "https://t.me/slavutych_mr"  # "https://t.me/test_sky_danger" for test
+TICK_SECONDS = 60  # 5 for test
 # REPEAT_ALARM_TIMES = 1  # use >5 for production
 
 
