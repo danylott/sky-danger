@@ -3,9 +3,9 @@ import time
 import datetime
 
 import configparser
-import pygame
 
-from pygame import mixer
+# import pygame
+# from pygame import mixer
 from telethon.sync import TelegramClient
 from telethon.errors import SessionPasswordNeededError
 from telethon.tl.functions.messages import GetHistoryRequest
@@ -17,7 +17,7 @@ from check_danger import check_text_is_danger, check_image_is_danger
 
 CHANNEL_LINK = "https://t.me/test_sky_danger"  # https://t.me/slavutych_mr for production
 TICK_SECONDS = 5  # 60 for production
-REPEAT_ALARM_TIMES = 1  # use >5 for production
+# REPEAT_ALARM_TIMES = 1  # use >5 for production
 
 
 config = configparser.ConfigParser()
@@ -83,13 +83,13 @@ def check_message_is_danger(client, message, datetime_str):
     return is_sky_danger
 
 
-def play_alarm():
-    for _ in range(REPEAT_ALARM_TIMES):
-        mixer.init()
-        mixer.music.load("sounds/siren.mp3")
-        mixer.music.play()
-        while mixer.music.get_busy():
-            pygame.time.Clock().tick(10)
+# def play_alarm():
+#     for _ in range(REPEAT_ALARM_TIMES):
+#         mixer.init()
+#         mixer.music.load("sounds/siren.mp3")
+#         mixer.music.play()
+#         while mixer.music.get_busy():
+#             pygame.time.Clock().tick(10)
 
 
 def main():
@@ -111,7 +111,7 @@ def main():
 
                 if check_message_is_danger(client, message, datetime_str):
                     perform_call()  # ALARM Call!
-                    play_alarm()  # ALARM!!!
+                    # play_alarm()  # ALARM!!! if needed
 
             time.sleep(TICK_SECONDS)
         except Exception as e:
